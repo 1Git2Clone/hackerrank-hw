@@ -12,11 +12,11 @@ where
     /// NOTE: Exists for the internal LCM implementation.
     #[deprecated(note = "use crate::utils::gcd::Gcd::gcd() instead.")]
     #[must_use]
-    fn __gcd_no_zero_check(mut self, mut other: Self) -> Self {
+    fn __gcd_no_zero_check(mut self, mut other: Self) -> u32 {
         let k = {
             let i = self.trailing_zeros();
             let j = other.trailing_zeros();
-            i.min(j) as usize
+            i.min(j)
         };
 
         while !other.is_zero() {
@@ -27,13 +27,13 @@ where
             other >>= other.trailing_zeros();
         }
 
-        self << k
+        (self.to_u32().unwrap()) << k
     }
-    fn gcd(self, other: Self) -> Self {
+    fn gcd(self, other: Self) -> u32 {
         if self.is_zero() {
-            return self;
+            return self.to_u32().unwrap();
         } else if other.is_zero() {
-            return other;
+            return other.to_u32().unwrap();
         }
         #[allow(deprecated)]
         self.__gcd_no_zero_check(other)
