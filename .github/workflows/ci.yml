@@ -20,6 +20,6 @@ jobs:
       - name: hw1-test-1
         run: cargo test --verbose --features hw1-test-1
       - name: hw1-test-2
-        run: RUSTFLAGS="-C overflow-checks=on" RUST_BACKTRACE=full cargo test --verbose --features hw1-test-2
+        run: cargo test --verbose --features hw1-test-2
       - name: hw1-test-3
         run: cargo test --verbose --features hw1-test-3
