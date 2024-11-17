@@ -19,10 +19,22 @@ const MAX: u32 = 100;
 ///
 /// ### Error
 ///
-/// If the input is invalid:
+/// If the input is invalid, return:
 ///
-/// ```rs
-/// return String::from("Invalid input data!");
+/// ```rust
+/// String::from("Invalid input data!");
+/// ```
+///
+/// ## Test cases
+///
+/// ```rust
+/// use hackerrank::hw1::task_3::Solution;
+///
+/// assert_eq!(Solution::main([10, 20, 30]), String::from("60"));
+/// assert_eq!(
+///     Solution::main([9, 10, 20]),
+///     String::from("Invalid input data!")
+/// );
 /// ```
 pub struct Solution;
 
