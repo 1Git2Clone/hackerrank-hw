@@ -16,5 +16,11 @@ algorithm) instead of the [Euclidean
 algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm).
 
 - [x] [Task 1](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges/discrete-mathematics-and-programming-hw-1-task-1)
+      ([src](./src/hw1/task_1.rs))
+      ([tests](./src/test/homeworks/hw1/task_1.rs))
 - [x] [Task 2](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges/discrete-mathematics-and-programming-hw-1-task-2)
+      ([src](./src/hw1/task_2.rs))
+      ([tests](./src/test/homeworks/hw1/task_2.rs))
 - [x] [Task 3](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges/discrete-mathematics-and-programming-hw-1-task-3)
+      ([src](./src/hw1/task_3.rs))
+      ([tests](./src/test/homeworks/hw1/task_3.rs))
