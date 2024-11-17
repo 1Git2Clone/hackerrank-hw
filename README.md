@@ -1,5 +1,12 @@
 # Hackerrank
 
+[![Build Icon]][Build Status]&emsp;[![License Icon]][LICENSE]
+
+[Build Icon]: https://img.shields.io/github/actions/workflow/status/1git2clone/hackerrank-hw/rust.yml?branch=main
+[Build Status]: https://github.com/1git2clone/hackerrank-hw/actions?query=branch%3Amain
+[License Icon]: https://img.shields.io/badge/license-MIT-blue.svg
+[LICENSE]: LICENSE
+
 University homework rewritten in Rust with the same testing as well.
 
 ## [Homework 1](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges)
