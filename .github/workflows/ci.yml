@@ -17,13 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build
         run: |
-          cargo build --verbose --features hw1
-      - name: hw1-test-1
+          cargo build --verbose --all-features
+      - name: Tests
         run: |
-          cargo test --verbose --features hw1-test-1 -- --nocapture
-      - name: hw1-test-2
-        run: |
-          cargo test --verbose --features hw1-test-2 -- --nocapture
-      - name: hw1-test-3
-        run: |
-          cargo test --verbose --features hw1-test-2 -- --nocapture
+          RUST_BACKTRACE=full cargo test --verbose --all-features -- --nocapture
