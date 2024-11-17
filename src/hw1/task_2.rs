@@ -30,8 +30,14 @@ const MAX: u32 = 100;
 /// ```rust
 /// use hackerrank::hw1::task_2::Solution;
 ///
-/// assert_eq!(Solution::main([24, 40, 64]), String::from("8"));
-/// assert_eq!(Solution::main([23, 25, 26]), String::from("1"));
+/// assert_eq!(
+///     Solution::main([24, 40, 64]),
+///     String::from("8")
+/// );
+/// assert_eq!(
+///     Solution::main([23, 25, 26]),
+///     String::from("1")
+/// );
 /// assert_eq!(
 ///     Solution::main([5, 25, 60]),
 ///     String::from("Invalid input data!")
