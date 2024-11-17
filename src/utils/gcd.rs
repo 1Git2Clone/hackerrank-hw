@@ -19,15 +19,18 @@ where
             i.min(j) as usize
         };
 
-        while !other.is_zero() {
+        loop {
             if self > other {
                 swap(&mut self, &mut other)
             }
             other -= self;
+
+            if other.is_zero() {
+                return self << k;
+            }
+
             other >>= other.trailing_zeros() as i8;
         }
-
-        self << k
     }
     fn gcd(self, other: Self) -> Self {
         if self.is_zero() {
