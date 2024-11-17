@@ -1,15 +1,15 @@
 use crate::utils::gcd::Gcd;
 
 pub trait Lcm: Gcd {
-    fn lcm(self, other: Self) -> u32 {
+    fn lcm(self, other: Self) -> Self {
         if self.is_zero() {
-            return self.to_u32().unwrap();
+            return self;
         } else if other.is_zero() {
-            return other.to_u32().unwrap();
+            return other;
         }
         #[allow(deprecated)] // Internal call to save second zero checks.
         {
-            (self * other).to_u32().unwrap() / (self.__gcd_no_zero_check(other))
+            (self * other) / (self.__gcd_no_zero_check(other))
         }
     }
 }
