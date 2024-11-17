@@ -1,10 +1,8 @@
 //! Homework 1 task runners
 
-use crate::utils::Error;
-
 #[test]
 #[cfg(any(feature = "hw1-test", feature = "hw1-test-1"))]
-fn hw1_task_1() -> Result<(), Error> {
+fn hw1_task_1() {
     use crate::hw1::task_1::Solution;
 
     assert_eq!(Solution::main(2, 8), String::from("1000"));
@@ -15,13 +13,11 @@ fn hw1_task_1() -> Result<(), Error> {
     assert_eq!(Solution::main(16, 34), String::from("22"));
     assert_eq!(Solution::main(16, 12), String::from("C"));
     assert_eq!(Solution::main(17, 5), String::from("Invalid input data!"));
-
-    Ok(())
 }
 
 #[test]
 #[cfg(any(feature = "hw1-test", feature = "hw1-test-2"))]
-fn hw1_task_2() -> Result<(), Error> {
+fn hw1_task_2() {
     use crate::hw1::task_2::Solution;
 
     assert_eq!(Solution::main([24, 40, 64]), String::from("8"));
@@ -34,13 +30,11 @@ fn hw1_task_2() -> Result<(), Error> {
         Solution::main([20, 20, 301]),
         String::from("Invalid input data!")
     );
-
-    Ok(())
 }
 
 #[test]
 #[cfg(any(feature = "hw1-test", feature = "hw1-test-3"))]
-fn hw1_task_3() -> Result<(), Error> {
+fn hw1_task_3() {
     use crate::hw1::task_3::Solution;
 
     assert_eq!(Solution::main([10, 20, 30]), String::from("60"));
@@ -48,6 +42,4 @@ fn hw1_task_3() -> Result<(), Error> {
         Solution::main([9, 10, 20]),
         String::from("Invalid input data!")
     );
-
-    Ok(())
 }
