@@ -1,7 +1,7 @@
 //! Homework 1 task runners
 
 #[test]
-#[cfg(any(feature = "hw1-test", feature = "hw1-test-3"))]
+#[cfg(any(feature = "all-tests", feature = "hw1-test", feature = "hw1-test-3"))]
 fn hw1_task_3() {
     use crate::hw1::task_3::Solution;
 

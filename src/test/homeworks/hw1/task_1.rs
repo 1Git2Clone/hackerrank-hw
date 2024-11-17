@@ -1,5 +1,5 @@
 #[test]
-#[cfg(any(feature = "hw1-test", feature = "hw1-test-1"))]
+#[cfg(any(feature = "all-tests", feature = "hw1-test", feature = "hw1-test-1"))]
 fn hw1_task_1() {
     use crate::hw1::task_1::Solution;
 
