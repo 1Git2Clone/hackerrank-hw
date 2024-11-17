@@ -1,21 +1,19 @@
 use std::{
     mem::swap,
-    ops::{Shl, ShrAssign, SubAssign},
+    ops::{ShrAssign, SubAssign},
 };
 
 use num_traits::PrimInt;
 
 pub trait Gcd
 where
-    Self: PrimInt,
-    Self: SubAssign + ShrAssign<u32> + Shl<u32>,
-    Self: From<<Self as Shl<u32>>::Output>,
+    Self: PrimInt + ShrAssign<u32> + SubAssign,
 {
     fn __gcd_no_zero_check(mut self, mut other: Self) -> Self {
         let k = {
             let i = self.trailing_zeros();
             let j = other.trailing_zeros();
-            i.min(j)
+            i.min(j) as usize
         };
 
         while !other.is_zero() {
@@ -26,7 +24,7 @@ where
             other >>= other.trailing_zeros();
         }
 
-        (self << k).into()
+        self << k
     }
     fn gcd(self, other: Self) -> Self {
         if self.is_zero() {
