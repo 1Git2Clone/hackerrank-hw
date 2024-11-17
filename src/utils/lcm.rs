@@ -7,7 +7,10 @@ pub trait Lcm: Gcd {
         } else if other.is_zero() {
             return other;
         }
-        (self * other) / (self.__gcd_no_zero_check(other))
+        #[allow(deprecated)] // Internal call to save second zero checks.
+        {
+            (self * other) / (self.__gcd_no_zero_check(other))
+        }
     }
 }
 

@@ -9,6 +9,9 @@ pub trait Gcd
 where
     Self: PrimInt + ShrAssign<u32> + SubAssign,
 {
+    /// NOTE: Exists for the internal LCM implementation.
+    #[deprecated(note = "use crate::utils::gcd::Gcd::gcd() instead.")]
+    #[must_use]
     fn __gcd_no_zero_check(mut self, mut other: Self) -> Self {
         let k = {
             let i = self.trailing_zeros();
@@ -32,6 +35,7 @@ where
         } else if other.is_zero() {
             return other;
         }
+        #[allow(deprecated)]
         self.__gcd_no_zero_check(other)
     }
 }
