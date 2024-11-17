@@ -1,7 +1,7 @@
 use crate::utils::{input::get_numeric_input, lcm::Lcm, Error};
 
-const MIN: u8 = 10;
-const MAX: u8 = 100;
+const MIN: u32 = 10;
+const MAX: u32 = 100;
 
 /// # HOMEWORK 1 | TASK 3
 ///
@@ -28,10 +28,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn main(user_input: [u32; 3]) -> String {
-        if user_input
-            .iter()
-            .any(|x| *x < MIN.into() || *x > MAX.into())
-        {
+        if user_input.iter().any(|x| *x < MIN || *x > MAX) {
             return String::from("Invalid input data!");
         }
 
@@ -40,7 +37,7 @@ impl Solution {
             user_input
                 .iter()
                 .skip(1)
-                .fold(user_input[0], |acc, x| Lcm::lcm(acc, *x))
+                .fold(user_input[0], |acc, x| acc.lcm(*x))
         )
     }
 }
