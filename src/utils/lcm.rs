@@ -11,7 +11,6 @@ pub trait Lcm: Gcd {
     }
 }
 
-#[macro_export]
 macro_rules! auto_impl_lcm {
     ($($x:ty),+ $(,)?) => ($(
         impl $crate::utils::lcm::Lcm for $x {}

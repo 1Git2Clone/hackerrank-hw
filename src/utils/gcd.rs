@@ -36,7 +36,6 @@ where
     }
 }
 
-#[macro_export]
 macro_rules! auto_impl_gcd {
     ($($x:ty),+ $(,)?) => ($(
         impl $crate::utils::gcd::Gcd for $x {}
