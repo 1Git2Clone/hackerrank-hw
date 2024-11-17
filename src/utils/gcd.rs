@@ -7,7 +7,7 @@ use num_traits::PrimInt;
 
 pub trait Gcd
 where
-    Self: PrimInt + ShrAssign<u32> + SubAssign,
+    Self: PrimInt + ShrAssign<usize> + SubAssign,
 {
     /// NOTE: Exists for the internal LCM implementation.
     #[deprecated(note = "use crate::utils::gcd::Gcd::gcd() instead.")]
@@ -24,7 +24,7 @@ where
                 swap(&mut self, &mut other)
             }
             other -= self;
-            other >>= other.trailing_zeros();
+            other >>= other.trailing_zeros() as usize;
         }
 
         self << k
