@@ -1,9 +1,9 @@
 use crate::utils::{input::get_numeric_input, Error};
 
-const MIN_NUM_SYSTEM: u8 = 2;
-const MAX_NUM_SYSTEM: u8 = 16;
-const MIN: u8 = 1;
-const MAX: u8 = 100;
+const MIN_NUM_SYSTEM: u32 = 2;
+const MAX_NUM_SYSTEM: u32 = 16;
+const MIN: u32 = 1;
+const MAX: u32 = 100;
 
 /// # HOMEWORK 1 | TASK 1
 ///
@@ -35,8 +35,8 @@ pub struct Solution;
 
 impl Solution {
     pub fn main(numeric_system: u32, mut decimal_input: u32) -> String {
-        if (numeric_system < MIN_NUM_SYSTEM.into() || numeric_system > MAX_NUM_SYSTEM.into())
-            || (decimal_input < MIN.into() || decimal_input > MAX.into())
+        if (!(MIN_NUM_SYSTEM..=MAX_NUM_SYSTEM).contains(&numeric_system))
+            || (!(MIN..=MAX).contains(&decimal_input))
         {
             return String::from("Invalid input data!");
         }
