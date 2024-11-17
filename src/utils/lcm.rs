@@ -14,10 +14,10 @@ pub trait Lcm: Gcd {
     }
 }
 
-macro_rules! auto_impl_lcm {
-    ($($x:ty),+ $(,)?) => ($(
-        impl $crate::utils::lcm::Lcm for $x {}
+macro_rules! lcm_impl {
+    ($name:ident for $($x:ty)*) => ($(
+        impl $name for $x {}
     )*)
 }
 
-auto_impl_lcm!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize);
+lcm_impl!(Lcm for i8 i16 i32 i64 i128 isize u8 u16 u32 u64 u128 usize);

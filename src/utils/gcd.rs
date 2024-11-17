@@ -43,10 +43,10 @@ where
     }
 }
 
-macro_rules! auto_impl_gcd {
-    ($($x:ty),+ $(,)?) => ($(
-        impl $crate::utils::gcd::Gcd for $x {}
+macro_rules! gcd_impl {
+    ($name:ident for $($x:ty)*) => ($(
+        impl $name for $x {}
     )*)
 }
 
-auto_impl_gcd!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize);
+gcd_impl!(Gcd for i8 i16 i32 i64 i128 isize u8 u16 u32 u64 u128 usize);
