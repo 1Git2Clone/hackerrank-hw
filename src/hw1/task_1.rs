@@ -1,4 +1,7 @@
-use crate::utils::{input::get_numeric_input, Error};
+use crate::utils::{
+    input::{get_numeric_input, invalid_input},
+    Error,
+};
 
 const MIN_NUM_SYSTEM: u32 = 2;
 const MAX_NUM_SYSTEM: u32 = 16;
@@ -77,7 +80,7 @@ impl Solution {
         if (!(MIN_NUM_SYSTEM..=MAX_NUM_SYSTEM).contains(&numeric_system))
             || (!(MIN..=MAX).contains(&decimal_input))
         {
-            return String::from("Invalid input data!");
+            return invalid_input();
         }
 
         let result = {
