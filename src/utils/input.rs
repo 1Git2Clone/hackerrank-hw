@@ -18,3 +18,7 @@ where
 
     Ok(tmp.trim().parse::<T>().unwrap())
 }
+
+pub fn invalid_input() -> String {
+    String::from("Invalid input data!")
+}
