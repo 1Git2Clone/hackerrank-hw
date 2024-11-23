@@ -21,6 +21,22 @@ const MAX: u32 = 100;
 ///
 /// The [GCD](<https://en.wikipedia.org/wiki/Greatest_common_divisor>) of the three numbers.
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 24
+/// 40
+/// 64
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 8
+/// ```
+///
 /// ### Error
 ///
 /// If the input is invalid, return:

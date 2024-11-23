@@ -27,6 +27,21 @@ const MAX: u32 = 100;
 /// A string representation of the decimal user input encoded in the numeric system radix (from
 /// binary to hexadecimal).
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 2
+/// 34
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 10010
+/// ```
+///
 /// ### Error
 ///
 /// If the input is invalid, return:

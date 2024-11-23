@@ -21,6 +21,22 @@ const MAX: u32 = 100;
 ///
 /// The [LCM](<https://en.wikipedia.org/wiki/Least_common_multiple>) of the three numbers.
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 10
+/// 20
+/// 30
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 60
+/// ```
+///
 /// ### Error
 ///
 /// If the input is invalid, return:
