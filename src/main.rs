@@ -1,4 +1,5 @@
 mod hw1;
+mod hw2;
 
 mod utils;
 use utils::Error;
@@ -24,6 +25,21 @@ fn main() -> Result<(), Error> {
 
         #[cfg(feature = "hw1-task-3")]
         HW_1[Task::Task3 as usize]()?;
+    }
+
+    #[cfg(any(feature = "hw2-task-1", feature = "hw2-task-2", feature = "hw2-task-3"))]
+    {
+        const HW_2: [fn() -> Result<(), Error>; 3] =
+            [hw2::task_1::main, hw2::task_2::main, hw2::task_3::main];
+
+        #[cfg(feature = "hw2-task-1")]
+        HW_2[Task::Task1 as usize]()?;
+
+        #[cfg(feature = "hw2-task-2")]
+        HW_2[Task::Task2 as usize]()?;
+
+        #[cfg(feature = "hw2-task-3")]
+        HW_2[Task::Task3 as usize]()?;
     }
 
     Ok(())
