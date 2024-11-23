@@ -21,6 +21,25 @@ const MAX: u32 = 2000;
 /// The sum of all the positive numbers up to (and including) `n` which are divisible by `n` and
 /// also prime numbers.
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 200
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 7
+/// ```
+///
+/// #### Explanation
+///
+/// 200 = 2^3 * 5^2
+/// 2 + 5 = 7
+///
 /// ### Error
 ///
 /// If the input is invalid, return:

@@ -20,6 +20,37 @@ const MAX: u32 = 2000;
 ///
 /// The count of all the positive numbers up to (and including) `n` which are divisible by `n`.
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 200
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 12
+/// ```
+///
+/// #### Explanation
+///
+/// The count of the numbers, divisble by n is 12 and they are:
+///
+/// 1  -   1
+/// 2  -   2
+/// 3  -   4
+/// 4  -   5
+/// 5  -   8
+/// 6  -  10
+/// 7  -  20
+/// 8  -  25
+/// 9  -  40
+/// 10 -  50
+/// 11 - 100
+/// 12 - 200
+///
 /// ### Error
 ///
 /// If the input is invalid, return:

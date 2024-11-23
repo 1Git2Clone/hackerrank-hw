@@ -21,6 +21,26 @@ const MAX: u32 = 2000;
 /// The sum of all the positive numbers up to (but **excluding**) `n` which are divisible by `n`
 /// and are NOT prime numbers.
 ///
+/// ### Sample
+///
+/// #### Input Format
+///
+/// ```txt
+/// 12
+/// ```
+///
+/// #### Output Format
+///
+/// ```txt
+/// 10
+/// ```
+///
+/// #### Explanation
+///
+/// The divisors of 12 are 2, 3, 4, and 6
+///
+/// The sum of the divisors that are not prime is: 4 + 6 = 10.
+///
 /// ### Error
 ///
 /// If the input is invalid, return:
