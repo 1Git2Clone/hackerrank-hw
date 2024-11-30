@@ -29,7 +29,7 @@ algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm).
 - [x] [Task 3](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges/discrete-mathematics-and-programming-hw-1-task-3)
       ([src](./src/hw1/task_3.rs))
 
-## [Homework 2](https://www.hackerrank.com/contests/citb106-f2024-hw1/challenges)
+## [Homework 2](https://www.hackerrank.com/contests/citb106-f2024-hw2/challenges)
 
 <!-- prettier-ignore -->
 - *23/11/2024*
@@ -40,3 +40,12 @@ algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm).
       ([src](./src/hw2/task_2.rs))
 - [x] [Task 3](https://www.hackerrank.com/contests/citb106-f2024-hw2/challenges/discrete-mathematics-and-programming-hw-2-task-3)
       ([src](./src/hw2/task_3.rs))
+
+## [Homework 3](https://www.hackerrank.com/contests/citb106-f2024-hw3/challenges)
+
+<!-- prettier-ignore -->
+- *30/11/2024*
+
+- [x] [Task 1](https://www.hackerrank.com/contests/citb106-f2024-hw2/challenges/discrete-mathematics-and-programming-hw-2-task-1)
+      ([src](./src/hw3/task_1.rs))
+

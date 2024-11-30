@@ -19,6 +19,12 @@ where
     Ok(tmp.trim().parse::<T>().unwrap())
 }
 
+#[must_use = "This function returns the 'Invalid input data!' value used for asserting tests."]
 pub fn invalid_input() -> String {
     String::from("Invalid input data!")
+}
+
+#[must_use = "This function returns the 'No solution!' value used for asserting tests."]
+pub fn no_solution() -> String {
+    String::from("No solution!")
 }

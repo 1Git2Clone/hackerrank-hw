@@ -43,6 +43,31 @@ where
     }
 }
 
+/// Implemented based on this implementation[1].
+///
+/// [1]: https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Pseudocode
+pub trait ExtendedGcd: Gcd {
+    /// Returns: (Self::BezoutCoefficient, Self::Gcd)
+    /// where:
+    /// - Self::BezoutCoefficient = (Self, Self)
+    /// - Self::Gcd = Self
+    fn extended_gcd(self, other: Self) -> ((Self, Self), Self) {
+        let (mut prev_r, mut r) = (self, other);
+        let (mut prev_s, mut s) = (Self::one(), Self::zero());
+        let (mut prev_t, mut t) = (Self::zero(), Self::one());
+
+        let mut q;
+        while r != Self::zero() {
+            q = prev_r / r;
+            (prev_r, r) = (r, prev_r - q * r);
+            (prev_s, s) = (s, prev_s - q * s);
+            (prev_t, t) = (t, prev_t - q * t);
+        }
+
+        ((prev_s, prev_t), prev_r)
+    }
+}
+
 macro_rules! gcd_impl {
     ($name:ident for $($x:ty)*) => ($(
         impl $name for $x {}
@@ -50,3 +75,4 @@ macro_rules! gcd_impl {
 }
 
 gcd_impl!(Gcd for i8 i16 i32 i64 i128 isize u8 u16 u32 u64 u128 usize);
+gcd_impl!(ExtendedGcd for i8 i16 i32 i64 i128 isize u8 u16 u32 u64 u128 usize);

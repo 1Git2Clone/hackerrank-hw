@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+katexit = "0.1.4"
 num-traits = "0.2.19"
 
 [features]
@@ -19,3 +20,7 @@ hw1-task-3 = []
 hw2-task-1 = []
 hw2-task-2 = []
 hw2-task-3 = []
+# ---
+# Homework 3
+# ---
+hw3-task-1 = []
