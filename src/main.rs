@@ -1,6 +1,7 @@
 mod hw1;
 mod hw2;
 mod hw3;
+mod hw4;
 
 mod utils;
 use utils::Error;
@@ -48,6 +49,16 @@ fn main() -> Result<(), Error> {
         const HW_3: [fn() -> Result<(), Error>; 1] = [hw3::task_1::main];
 
         HW_3[Task::Task1 as usize]()?;
+    }
+
+    #[cfg(any(feature = "hw4-task-1", feature = "hw4-task-2"))]
+    {
+        const HW_4: [fn() -> Result<(), Error>; 2] = [hw4::task_1::main, hw4::task_2::main];
+
+        #[cfg(feature = "hw4-task-1")]
+        HW_4[Task::Task1 as usize]()?;
+        #[cfg(feature = "hw4-task-2")]
+        HW_4[Task::Task2 as usize]()?;
     }
 
     Ok(())

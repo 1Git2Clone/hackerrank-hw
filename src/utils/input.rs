@@ -19,6 +19,16 @@ where
     Ok(tmp.trim().parse::<T>().unwrap())
 }
 
+pub fn get_input() -> Result<String, Error> {
+    let mut tmp = String::new();
+    if let Err(err) = std::io::stdin().read_line(&mut tmp) {
+        return Err(err.into());
+    }
+    std::io::stdout().flush()?;
+
+    Ok(tmp.trim().into())
+}
+
 #[must_use = "This function returns the 'Invalid input data!' value used for asserting tests."]
 pub fn invalid_input() -> String {
     String::from("Invalid input data!")
