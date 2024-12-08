@@ -1,10 +1,10 @@
 use std::{fmt::Debug, io::Write, str::FromStr};
 
-use crate::utils::{gcd::Gcd, lcm::Lcm, Error};
+use crate::utils::Error;
 
 pub fn get_numeric_input<T>() -> Result<T, Error>
 where
-    T: FromStr + Debug + Gcd + Lcm,
+    T: FromStr,
     <T as FromStr>::Err: Debug,
 {
     let mut tmp = String::new();
